@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import avatar from '../images/me.png'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,6 +11,11 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <div className="header">
+          <img className="avatar" src={avatar} alt="Sam Roth" />
+          <h1 className="name">Samuel Roth</h1>
+          <p className="description">Software Engineer</p>
+        </div>
         <div className="grid-container">
           <p class="section-title">Featured</p>
 
