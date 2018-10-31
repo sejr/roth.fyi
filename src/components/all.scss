@@ -1,6 +1,8 @@
 $medium: 700px;
 $large: 1024px;
 
+@import "../icons/style.css";
+
 html {
   background: #f8f8fa;
 }
@@ -33,7 +35,7 @@ p {
     font-weight: 800;
     margin: 0;
     padding: 0;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .description {
@@ -47,9 +49,85 @@ p {
 
 .grid-container {
   display: grid;
-  grid-row-gap: 5px;
-  grid-column-gap: 5px;
-  grid-template-columns: repeat(8, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  // max-width: 1280px;
+  // margin: 0 auto;
+
+  .mailing-list {
+    grid-column: span 12;
+    background: #007aff;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $medium) {
+      padding: 100px 20px;
+    }
+
+    .icon-at {
+      color: white;
+      font-size: 2em;
+    }
+
+    .action-email {
+      background: rgba(0,0,20,0.2);
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: white;
+      transition: all 0.2s;
+
+      &::placeholder {
+        opacity: 0.8;
+        text-align: center;
+      }
+
+      &:focus {
+        color: #333;
+        background: white;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+        &::placeholder {
+          text-align: left;
+        }
+      }
+    }
+
+    .action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0px;
+      text-align: center;
+
+      @media (min-width: $medium) {
+        margin: 40px 0px;
+      }
+
+      .call-to-action {
+        color: white;
+        font-weight: 700;
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: $medium) {
+          font-size: 2em;
+        }
+      }
+  
+      .call-description {
+        margin: 0;
+        padding: 0;
+        color: rgba(255,255,255,0.7);
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+    }
+  }
 
   .section-title {
     margin: 0;
@@ -57,9 +135,8 @@ p {
     margin-top: 2em;
     grid-column: span 8;
     font-weight: 900;
-    font-size: 1.2em;
     padding: 10px 20px;
-    color: #bbc;
+    color: rgba(0,0,20,0.3);
   }
 
   .post {
@@ -68,22 +145,22 @@ p {
     justify-content: flex-end;
     min-height: 200px;
     background-color: white;
-    grid-column: span 8;
+    grid-column: span 12;
     background-size: cover;
     background-position: center;
     min-height: 300px;
     text-decoration: none;
+    // border-radius: 20px;
 
     &.primary {
       @media (min-width: $medium) {
-        grid-column: span 8;
+        grid-column: span 12;
         .content {
           .post-title {
             margin: 0;
             padding: 0;
             color: #334;
             font-weight: 700;
-            font-size: 3em;
           }
           .post-timestamp {
             font-size: 1.5em;
@@ -92,7 +169,7 @@ p {
       }
 
       @media (min-width: $large) {
-        grid-column: span 5;
+        grid-column: span 8;
         grid-row: span 2;
         .content {
           .post-title {
@@ -112,20 +189,19 @@ p {
 
     &.secondary {
       @media (min-width: $medium) {
-        grid-column: span 4;
+        grid-column: span 6;
         .content {
           .post-title {
             margin: 0;
             padding: 0;
             color: #334;
             font-weight: 700;
-            font-size: 2em;
           }
         }
       }
 
       @media (min-width: $large) {
-        grid-column: span 3;
+        grid-column: span 4;
         .content {
           .post-title {
             margin: 0;
@@ -143,7 +219,7 @@ p {
     }
 
     @media (min-width: $medium) {
-      grid-column: span 2;
+      grid-column: span 3;
     }
 
     .image {
