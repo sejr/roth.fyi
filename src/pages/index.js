@@ -32,12 +32,12 @@ export default class IndexPage extends React.Component {
 
           {
             posts.slice(1, 3).map(({node: post}) => (
-              <div class="post secondary" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
+              <Link to={post.fields.slug}  class="post secondary" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
                 <div class="content">
                   <p className="post-timestamp">{ post.frontmatter.date }</p>
                   <p className="post-title">{ post.frontmatter.title }</p>
                 </div>
-              </div>
+              </Link>
             ))
           }
 
@@ -45,12 +45,12 @@ export default class IndexPage extends React.Component {
 
           {
             posts.slice(3, posts.length).map(({node: post}) => (
-              <div class="post" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
+              <Link to={post.fields.slug}  class="post" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
                 <div class="content">
                   <p className="post-timestamp">{ post.frontmatter.date }</p>
                   <p className="post-title">{ post.frontmatter.title }</p>
                 </div>
-              </div>
+              </Link>
             ))
           }
         </div>
