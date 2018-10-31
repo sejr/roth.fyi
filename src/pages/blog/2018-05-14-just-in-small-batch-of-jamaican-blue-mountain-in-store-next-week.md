@@ -1,7 +1,8 @@
 ---
 templateKey: 'blog-post'
 title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
-date: 2017-01-04T15:04:10.000Z
+date: 2018-05-14T15:04:10.000Z
+featuredImage: http://news.mit.edu/sites/mit.edu.newsoffice/files/images/2015/MIT-LincolnLabs.jpg
 description: >-
   We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
   Mountain coffee beans in our store next week.

@@ -10,7 +10,46 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
+        <div className="grid-container">
+          <p class="section-title">Featured</p>
+
+          {
+            posts.slice(0, 1).map(({node: post}) => (
+              <Link to={post.fields.slug} class="post primary" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
+                <div class="content">
+                  <p className="post-timestamp">{ post.frontmatter.date }</p>
+                  <p className="post-title">{ post.frontmatter.title }</p>
+                </div>
+              </Link>
+            ))
+          }
+
+          {
+            posts.slice(1, 3).map(({node: post}) => (
+              <div class="post secondary" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
+                <div class="content">
+                  <p className="post-timestamp">{ post.frontmatter.date }</p>
+                  <p className="post-title">{ post.frontmatter.title }</p>
+                </div>
+              </div>
+            ))
+          }
+
+          { posts.slice(3,posts.length).length > 0 && <p class="section-title">Previously</p> }
+
+          {
+            posts.slice(3, posts.length).map(({node: post}) => (
+              <div class="post" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
+                <div class="content">
+                  <p className="post-timestamp">{ post.frontmatter.date }</p>
+                  <p className="post-title">{ post.frontmatter.title }</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        {/* <section className="section">
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
@@ -40,7 +79,7 @@ export default class IndexPage extends React.Component {
                 </div>
               ))}
           </div>
-        </section>
+        </section> */}
       </Layout>
     )
   }
@@ -70,6 +109,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            featuredImage
             date(formatString: "MMMM DD, YYYY")
           }
         }

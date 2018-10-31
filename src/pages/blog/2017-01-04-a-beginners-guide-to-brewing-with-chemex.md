@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: A beginners’ guide to brewing with Chemex
 date: 2017-01-04T15:04:10.000Z
+featuredImage: https://s4827.pcdn.co/wp-content/uploads/2018/06/macOS_mojave_wallpaper_day.jpg
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - brewing
