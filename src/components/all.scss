@@ -84,6 +84,7 @@ p {
       }
 
       .action-submit {
+        -webkit-appearance: none;
         width: 100%;
         font-size: 16px;
         line-height: 16px;
@@ -116,6 +117,7 @@ p {
       }
   
       .action-email {
+        -webkit-appearance: none;
         background: white;
         border: none;
         font-size: 16px;
