@@ -3,6 +3,7 @@ module.exports = {
     title: 'Samuel Roth',
   },
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
