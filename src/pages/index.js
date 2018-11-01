@@ -56,12 +56,19 @@ export default class IndexPage extends React.Component {
           <div className="mailing-list">
             <span class="icon-at"></span>
             <div className="action">
-              <p className="call-to-action">Let's keep in touch.</p>
+              <p className="call-to-action">Keep in touch.</p>
               <p className="call-description">
-                Join my mailing list to get new posts straight in your inbox.
+                New posts in your email inbox.
+              </p>
+              <p className="call-description">
+                No spam obviously.
               </p>
             </div>
-            <input className="action-email" placeholder="john@example.com" />
+
+            <form name="mailing-list" className="action-form" netlify>
+              <input name="email" className="action-email" placeholder="steve@apple.com" />
+              <input className="action-submit" type="submit" value="Subscribe"></input>
+            </form>
           </div>
         </div>
       </Layout>
