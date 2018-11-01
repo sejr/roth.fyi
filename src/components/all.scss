@@ -338,3 +338,69 @@ p {
     }
   }
 }
+
+.blog {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: white;
+
+  .blog-image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .blog-content {
+    z-index: 1;
+    position: relative;
+    background: white;
+    top: -25vh;
+    padding: 20px;
+
+    @supports (backdrop-filter: blur(50px)) {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(50px);
+    }
+
+    .blog-date {
+      font-weight: 500;
+      color: #99a;
+    }
+  
+    .blog-title {
+      margin-top: 0;
+      font-size: 1.5em;
+      font-weight: 900;
+    }
+  
+    .blog-description {
+      font-weight: 500;
+      color: #667;
+      margin: 20px 0px;
+    }
+  }
+
+  @media (min-width: $medium) {
+
+    .blog-content {
+      padding: 50px;
+
+      .blog-date {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+      
+      .blog-title {
+        font-size: 3em;
+      }
+  
+      .blog-description {
+        font-size: 1.5em;
+        margin: 50px 0px;
+      }
+  
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
