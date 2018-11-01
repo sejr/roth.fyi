@@ -53,6 +53,7 @@ export default class IndexPage extends React.Component {
               </Link>
             ))
           }
+          
           <div className="mailing-list">
             <span class="icon-at"></span>
             <div className="action">
