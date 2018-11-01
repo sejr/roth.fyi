@@ -210,7 +210,12 @@ p {
     background-position: center;
     min-height: 300px;
     text-decoration: none;
+    transition: all 0.2s;
     // border-radius: 20px;
+
+    &:hover {
+      opacity: 0.5;
+    }
 
     &.primary {
       @media (min-width: $medium) {
