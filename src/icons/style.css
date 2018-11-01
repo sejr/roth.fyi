@@ -1,4 +1,24 @@
 @font-face {
+  font-family: 'Roboto Mono';
+  src: url('fonts/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('fonts/RobotoMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('fonts/RobotoMono-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* ICOMOON */
+
+@font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?z1s07h');
   src:  url('fonts/icomoon.eot?z1s07h#iefix') format('embedded-opentype'),

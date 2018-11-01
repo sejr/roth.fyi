@@ -342,10 +342,11 @@ p {
 .blog {
   max-width: 1024px;
   margin: 0 auto;
-  background: white;
+  // background: white;
 
   .blog-image {
     width: 100%;
+    height: 256px;
     object-fit: cover;
   }
 
@@ -353,8 +354,12 @@ p {
     z-index: 1;
     position: relative;
     background: white;
-    top: -25vw;
     padding: 20px;
+
+    .post-image {
+      width: 100%;
+      margin: 20px 0px;
+    }
 
     @supports (backdrop-filter: blur(50px)) {
       background: rgba(255,255,255,0.8);
@@ -386,6 +391,11 @@ p {
     .blog-content {
       padding: 50px;
 
+      .post-image {
+        width: 100%;
+        margin: 50px 0px;
+      }
+
       .blog-date {
         font-size: 1.5em;
         font-weight: 500;
@@ -402,6 +412,7 @@ p {
   
       p {
         font-size: 1.2em;
+        line-height: 1.5em;
       }
     }
   }
