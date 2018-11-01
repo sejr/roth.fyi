@@ -110,10 +110,8 @@ p {
         padding: 0px 20px;
         height: 50px;
         border: none;
-        border-radius: 12px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        margin-top: 2px;
+        border-radius: 10px;
+        margin-top: 20px;
         font-weight: 700;
         color: white;
         background: rgba(255,255,255,0.3);
@@ -144,9 +142,7 @@ p {
         line-height: 20px;
         height: 50px;
         padding: 0px 20px;
-        border-radius: 12px;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
+        border-radius: 50px;
         text-align: center;
   
         @media(min-width: $medium) {
@@ -218,6 +214,7 @@ p {
 
     &.primary {
       @media (min-width: $medium) {
+        min-height: 500px;
         grid-column: span 12;
         .content {
           .post-title {
@@ -253,6 +250,7 @@ p {
 
     &.secondary {
       @media (min-width: $medium) {
+        min-height: 256px;
         grid-column: span 6;
         .content {
           .post-title {
