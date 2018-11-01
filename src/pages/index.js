@@ -26,7 +26,7 @@ export default class IndexPage extends React.Component {
           </div>
         </div>
         <div className="grid-container">
-          <p class="section-title">Featured</p>
+          { posts.length > 0 && <p class="section-title">Featured</p> }
 
           {
             posts.slice(0, 1).map(({node: post}) => (
