@@ -77,6 +77,10 @@ export default class IndexPage extends React.Component {
               <input className="action-submit" type="submit" value="Subscribe"></input>
             </form>
           </div>
+
+          <div className="footer">
+            Built with Gatsby and hosted by Netlify.
+          </div>
         </div>
       </Layout>
     )
