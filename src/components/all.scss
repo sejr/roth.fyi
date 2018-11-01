@@ -356,9 +356,58 @@ p {
     background: white;
     padding: 20px;
 
-    .post-image {
+    .note {
+      padding: 20px;
+      border-radius: 10px;
+
+      .note-title {
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      &.info {
+        background: rgba(0, 122, 255, 0.1);
+        color: #002a59;
+      }
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    p {
+      color: #444;
+      margin: 20px 0px;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    a {
+      color: #007aff;
+    }
+
+    figure {
       width: 100%;
       margin: 20px 0px;
+
+      .post-image {
+        width: 100%;
+      }
+
+      figcaption {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.8em;
+        font-weight: 500;
+        color: #778;
+      }
     }
 
     @supports (backdrop-filter: blur(50px)) {
@@ -391,9 +440,18 @@ p {
     .blog-content {
       padding: 50px;
 
-      .post-image {
+      .note {
+        padding: 30px;
+        font-size: 1.2em;
+      }
+
+      figure {
         width: 100%;
         margin: 50px 0px;
+  
+        .post-image {
+          width: 100%;
+        }
       }
 
       .blog-date {
@@ -408,6 +466,14 @@ p {
       .blog-description {
         font-size: 1.5em;
         margin: 50px 0px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      h2 {
+        font-size: 1.75em;
       }
   
       p {

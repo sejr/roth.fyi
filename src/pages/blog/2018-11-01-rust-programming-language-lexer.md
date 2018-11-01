@@ -1,12 +1,11 @@
 ---
 templateKey: blog-post
-title: Lexical Analysis in Rust
+title: "Building a Programming Language with Rust: Lexical Analysis"
 date: 2018-11-01T14:25:30.878Z
 description: >-
   This is the first post in a series about building a programming language with
-  Rust. In this post we introduce a context-free grammar and use it to build a
-  "lexer," which allows us to validate the syntax of programs written in our
-  language.
+  Rust. In this post, we introduce language grammars and use one to build a
+  lexer (or tokenizer) that defines the syntax of our language.
 tags:
   - rust
   - programming languages
@@ -15,11 +14,33 @@ featuredImage: /img/rust.png
 
 # Introduction
 
-This series assumes you have experience writing programs with one or more programming languages. Throughout the series we will provide an introductory overview of what goes on behind the scenes.
- 
-To build a programming language, the first thing we want to consider is its syntax; that is, how the code will look. There are tons of different programming languages and syntax varies widely amongst them.
+## Building a Programming Language with Rust
 
-<img class="post-image" src="/img/compiler.png" />
+The purpose of this series is to introduce the basic concepts of programming language design, and to demonstrate 
+the implementation of these concepts using [Rust](https://www.rust-lang.org/). Whether you are curious about how programming languages work, 
+want to make your own, or just want to learn more about Rust, it is my hope that you will find these articles useful.
+
+I make the assumption that you have experience using one or more programming languages and understand common
+language features like variables, loops, conditional statements, and functions.
+
+## What is lexical analysis?
+
+Consider the following Rust code:
+
+```rust
+fn main() {
+    println!("Hello world!");
+}
+```
+
+This is a very basic program that prints `Hello world!` when it is compiled and executed. To do that,
+you would want to put it inside a file such as `main.rs` and run the Rust compiler, `cargo`. Cargo
+does its magic and, almost immediately, you see the text appear as expected.
+
+<figure>
+    <img class="post-image" src="/img/compiler.png" />
+    <figcaption>Figure 1. The beginning stages of a compiler; the focus of this post is highlighted in blue.</figcaption>
+</figure>
 
 Include some examples:
 
