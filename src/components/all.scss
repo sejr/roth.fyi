@@ -78,18 +78,20 @@ p {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      width: 100%;
 
       @media(min-width: $medium) {
         flex-direction: row;
+        max-width: 500px;
+        margin: 0 auto;
       }
 
       .action-submit {
         -webkit-appearance: none;
         width: 100%;
-        font-size: 16px;
-        line-height: 16px;
-        height: 40px;
-        padding: 0px 20px;
+        font-size: 20px;
+        line-height: 20px;
+        height: 50px;
         border: none;
         border-radius: 12px;
         border-top-left-radius: 3px;
@@ -120,9 +122,9 @@ p {
         -webkit-appearance: none;
         background: white;
         border: none;
-        font-size: 16px;
-        line-height: 16px;
-        height: 40px;
+        font-size: 20px;
+        line-height: 20px;
+        height: 50px;
         padding: 0px 20px;
         border-radius: 12px;
         border-bottom-left-radius: 3px;
