@@ -201,7 +201,7 @@ p {
 
   .footer {
     padding: 20px;
-    margin-bottom: 5px;
+    margin-bottom: unquote('max(5px, env(safe-area-inset-bottom))');
     grid-column: span 12;
     font-weight: 500;
     color: #889;
