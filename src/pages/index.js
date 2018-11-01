@@ -66,7 +66,8 @@ export default class IndexPage extends React.Component {
               </p>
             </div>
 
-            <form name="mailing-list" method="POST" className="action-form" netlify>
+            <form name="mailing-list" method="POST" className="action-form" data-netlify="true">
+              <input type="hidden" name="form-name" value="mailing list" />
               <input name="email" className="action-email" placeholder="steve@apple.com" />
               <input className="action-submit" type="submit" value="Subscribe"></input>
             </form>
