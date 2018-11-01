@@ -45,6 +45,22 @@ p {
     color: rgba(0,0,10,0.5);
     font-size: 1.2em;
   }
+
+  .icons {
+    margin-top: 30px;
+    a {
+      text-decoration: none;
+      .icon {
+        font-size: 32px;
+        margin: 10px;
+        opacity: 0.3;
+        transition: all 0.2s;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
 }
 
 .grid-container {

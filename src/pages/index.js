@@ -19,6 +19,11 @@ export default class IndexPage extends React.Component {
           }/>
           <h1 className="name">Samuel Roth</h1>
           <p className="description">Software Engineer</p>
+          <div className="icons">
+            <a href="https://www.twitter.com/sjroot"><i className="icon icon-twitter"></i></a>
+            <a href="https://www.github.com/sejr"><i className="icon icon-github"></i></a>
+            <a href="https://www.linkedin.com/in/samuelroth1"><i className="icon icon-linkedin"></i></a>
+          </div>
         </div>
         <div className="grid-container">
           <p class="section-title">Featured</p>
