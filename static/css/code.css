@@ -42,6 +42,7 @@
      overflow: auto;
      /* border: 1px solid #dddddd; */
      background-color: #f8f8fa;
+     -webkit-overflow-scrolling: touch;
      border-radius: 10px;
  }
  
