@@ -10071,6 +10071,10 @@ react-portal@^3.1.0:
   dependencies:
     prop-types "^15.5.8"
 
+react-progressive-image-loading@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-progressive-image-loading/-/react-progressive-image-loading-3.0.3.tgz#7e99298b9bd76bc7dcfba9cdf83c263d41f17dc3"
+
 react-redux@^4.0.0, react-redux@^4.4.0:
   version "4.4.9"
   resolved "http://registry.npmjs.org/react-redux/-/react-redux-4.4.9.tgz#8ca6d4670925a454ce67086c2305e9630670909a"

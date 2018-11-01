@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import avatar from '../images/me.png'
+import avatar from '../images/sam.png'
+import avatarPreview from '../images/sam.preview.png'
+import ProgressiveImage from 'react-progressive-image-loading'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -12,7 +14,9 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <div className="header">
-          <img className="avatar" src={avatar} alt="Sam Roth" />
+          <ProgressiveImage preview={avatarPreview} src={avatar} render={(src, style) => 
+            <img className="avatar" alt="Sam Roth avatar" src={src} style={style} />
+          }/>
           <h1 className="name">Samuel Roth</h1>
           <p className="description">Software Engineer</p>
         </div>
