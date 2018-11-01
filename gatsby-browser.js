@@ -2,4 +2,4 @@
 
 // gatsby-browser.js
 // import Prism from 'prismjs'
-require("prismjs/themes/prism-ghcolors.css")
+require("./static/css/code.css")
