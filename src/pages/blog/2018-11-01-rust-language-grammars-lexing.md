@@ -81,7 +81,7 @@ be comprised of many smaller arithmetic expressions. Let's look at a pretty comp
 see how it adheres to our grammar.
 
 ```
-(8 - (2 * 3)) * ((30 * (3 / 2)) - 24)
+(8 - (2 * 3)) + ((30 * (3 / 2)) - 5)
 ```
 
 <figure>
