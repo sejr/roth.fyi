@@ -80,13 +80,9 @@ You might already notice the *recursive* nature of a language grammar. Meaning, 
 be comprised of many smaller arithmetic expressions. Let's look at a pretty complicated arithmetic expression and
 see how it adheres to our grammar.
 
-```
-(8 - (2 * 3)) + ((30 * (3 / 2)) - 5)
-```
-
 <figure>
     <img class="post-image" src="/img/expr.svg" />
-    <figcaption>Figure 1. The stages we will explore in this series; the focus of this post is highlighted in blue.</figcaption>
+    <figcaption>Figure 2. Tree structure showing nested arithmetic expressions.</figcaption>
 </figure>
 
 ## Validating Statements
