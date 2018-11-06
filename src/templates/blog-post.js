@@ -24,6 +24,7 @@ export const BlogPostTemplate = ({
       <img className="blog-image" alt={title} src={image} />
 
       <div class="blog-content">
+        <Link to="/" style={{background: 'rgba(0,122,255,0.1)', padding: 10, borderRadius: 10, fontSize: 18, textDecoration: 'none', fontWeight: 500}}>← Back</Link>
         <p className="blog-date">{date}</p>
         <h1 className="blog-title">{title}</h1>
         <p className="blog-description">{description}</p>

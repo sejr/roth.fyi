@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+status: draft
 title: "Building a Programming Language with Rust: Grammars and Lexing"
 date: 2018-11-01T14:25:30.878Z
 description: >-
@@ -85,9 +86,31 @@ see how it adheres to our grammar.
     <figcaption>Figure 2. Tree structure showing nested arithmetic expressions.</figcaption>
 </figure>
 
-## Validating Statements
+In this tree, each blue node represents a valid `<ArithmeticExpression>`, and starting from the leaves, they are
+composed until the node at the root represents the entire expression. 
 
-If you'd like to see a complete one, I would recommend looking at the [grammar for Python](https://docs.python.org/3/reference/grammar.html).
+That's great, but programming languages
+are a little more complicated than basic math, right? Let's think about how we want our language to look, and
+use that to drive the development of our grammar.
+
+<div style="display: flex; justify-content: center; margin: 100px 0">
+    <img src="/img/iron.svg" />
+</div>
+
+# Introducing Iron
+
+The language that I want to build is inspired by Rust, Python 3, and TypeScript. I have decided to call it Iron because
+that gives
+
+```
+
+```
+
+## Variable Assignment
+
+## If-Else Statements
+
+## For and While Loops
 
 # Lexing
 
@@ -104,3 +127,10 @@ you would want to put it inside a file such as `main.rs` and run the Rust compil
 does its magic and, almost immediately, you see the text appear as expected.
 
 # Introducing Iron
+
+# Further Reading
+
+* https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form
+* https://www.cs.rochester.edu/~nelson/courses/csc_173/grammars/cfg.html
+* https://docs.python.org/3/reference/grammar.html
+* https://github.com/frenchy64/typescript-parser/blob/master/typescript.ebnf

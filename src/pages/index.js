@@ -59,7 +59,7 @@ export default class IndexPage extends React.Component {
             ))
           }
           
-          <div className="mailing-list">
+          {/* <div className="mailing-list">
             <span class="icon-at"></span>
             <div className="action">
               <p className="call-to-action">Keep in touch.</p>
@@ -76,7 +76,7 @@ export default class IndexPage extends React.Component {
               <input name="email" className="action-email" placeholder="steve@apple.com" />
               <input className="action-submit" type="submit" value="Subscribe"></input>
             </form>
-          </div>
+          </div> */}
 
           <div className="footer">
             Built with Gatsby and hosted by Netlify.
@@ -99,7 +99,12 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+      filter: {
+        frontmatter: { 
+          templateKey: { eq: "blog-post" }
+          status: { ne: "draft" }
+        }
+      }
     ) {
       edges {
         node {
