@@ -1,0 +1,72 @@
+.tag-list {
+  margin-top: 10px;
+  display: flex;
+
+  .tag {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background: #eee;
+    color: #444;
+
+    &.iron {
+      background: #ff0044;
+      color: white;
+    }
+
+    &.user {
+      &.experience {
+        background: #00a523;
+        color: white;
+      }
+    }
+
+    &.cpp {
+      background: #183c75;
+      color: white;
+    }
+
+    &.c {
+      background: #555;
+      color: white;
+    }
+    
+    &.rust {
+      color: #fff;
+      background: #d6420c;
+    }
+
+    &.vue {
+      background: #1aa570;
+      color: white;
+    }
+
+    &.node {
+      background: #1ca51a;
+      color: white;
+    }
+
+    &.typescript {
+      background: #1678ce;
+      color: white;
+    }
+
+    &.swift {
+      color: #fff;
+      background: #ff7700
+    }
+
+    &.privacy {
+      color: #fff;
+      background: #710ad8;
+    }
+
+    &.react {
+      background: #77e0ff;
+      color: #00313f;
+    }
+  }
+}

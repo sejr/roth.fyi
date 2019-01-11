@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import avatar from '../images/sam.png'
+import Tag from '../components/Tag'
+import Header from '../components/Header'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -11,49 +12,20 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <div className="header">
-          <img className="avatar" alt="Sam Roth avatar" src={avatar} />
-          <h1 className="name">Samuel Roth</h1>
-          <p className="description">Software Engineer</p>
-          <div className="icons">
-            <a href="https://www.twitter.com/sjroot"><i className="icon icon-twitter"></i></a>
-            <a href="https://www.github.com/sejr"><i className="icon icon-github"></i></a>
-            <a href="https://www.linkedin.com/in/samuelroth1"><i className="icon icon-linkedin"></i></a>
-          </div>
-        </div>
+        <Header />
         <div className="grid-container">
-          { posts.length > 0 && <p class="section-title">Featured</p> }
 
           {
-            posts.slice(0, 1).map(({node: post}) => (
-              <Link to={post.fields.slug} class="post primary" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
-                <div class="content">
+            posts.map(({node: post}) => (
+              <Link to={post.fields.slug}  className="post">
+                <div className="content">
                   <p className="post-timestamp">{ post.frontmatter.date }</p>
                   <p className="post-title">{ post.frontmatter.title }</p>
-                </div>
-              </Link>
-            ))
-          }
-
-          {
-            posts.slice(1, 3).map(({node: post}) => (
-              <Link to={post.fields.slug}  class="post secondary" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
-                <div class="content">
-                  <p className="post-timestamp">{ post.frontmatter.date }</p>
-                  <p className="post-title">{ post.frontmatter.title }</p>
-                </div>
-              </Link>
-            ))
-          }
-
-          { posts.slice(3,posts.length).length > 0 && <p class="section-title">Previously</p> }
-
-          {
-            posts.slice(3, posts.length).map(({node: post}) => (
-              <Link to={post.fields.slug}  class="post" style={{ backgroundImage: `url('${post.frontmatter.featuredImage}')` }}>
-                <div class="content">
-                  <p className="post-timestamp">{ post.frontmatter.date }</p>
-                  <p className="post-title">{ post.frontmatter.title }</p>
+                  <div className="tag-list">
+                    {
+                      post.frontmatter.tags.map(tag => <Tag name={tag} />)
+                    }
+                  </div>
                 </div>
               </Link>
             ))
@@ -78,9 +50,9 @@ export default class IndexPage extends React.Component {
             </form>
           </div> */}
 
-          <div className="footer">
+          {/* <div className="footer">
             Built with Gatsby and hosted by Netlify.
-          </div>
+          </div> */}
         </div>
       </Layout>
     )
@@ -102,13 +74,12 @@ export const pageQuery = graphql`
       filter: {
         frontmatter: { 
           templateKey: { eq: "blog-post" }
-          status: { ne: "draft" }
         }
       }
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 300)
           id
           fields {
             slug
@@ -118,6 +89,7 @@ export const pageQuery = graphql`
             templateKey
             featuredImage
             date(formatString: "MMMM DD, YYYY")
+            tags
           }
         }
       }
