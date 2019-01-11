@@ -5,7 +5,7 @@ date: 2018-11-06T9:00:00.885Z
 description: Apps like OutVote and VoteWithMe allow you to easily see how your friends, family, and colleagues have voted. Should we be concerned?
 tags:
   - privacy
-  - user experience
+  - ux
 featuredImage: /img/vwm.png
 ---
 

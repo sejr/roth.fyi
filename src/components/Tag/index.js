@@ -8,6 +8,8 @@ const getTag = (tag) => {
       return 'c++'
     case 'typescript':
       return 'TypeScript'
+    case 'ux':
+      return 'UX'
     default:
       return tag
   }
