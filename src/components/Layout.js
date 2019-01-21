@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import './all.scss'
+import '../assets/all.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>

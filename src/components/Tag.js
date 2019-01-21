@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import './Tag.scss'
+import '../assets/Tag.scss'
 
 const getTag = (tag) => {
   switch(tag) {
